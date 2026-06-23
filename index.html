@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Invitation — Princess A. Deekshitha</title>
+
+    <!-- Social share preview (WhatsApp / FB) -->
+    <meta
+      property="og:title"
+      content="🎀 You're Invited — Princess A. Deekshitha turns 1!"
+    />
+    <meta
+      property="og:description"
+      content="Join us on June 16, 2026 to celebrate our little princess's 1st birthday 🎂"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ════════════════════════════════════════════════
+       🎨 THEME TOKENS  (change colours here only)
+    ═══════════════════════════════════════════════════ */
+      :root {
+        --pink: #ff6fb7;
+        --pink-light: #ffe0f0;
+        --pink-dark: #e0317a;
+        --rose-deep: #b81f63;
+        --gold: #f5c842;
+        --gold-deep: #c8960c;
+        --cream: #fff9fb;
+        --text: #4a1942;
+        --text-soft: #8a4a78;
+        --shadow: rgba(224, 49, 122, 0.25);
+        --maxw: 960px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--cream);
+        color: var(--text);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      img {
+        display: block;
+      }
+      span.gold {
+        color: var(--gold-deep);
+        font-weight: 700;
+      }
+
+      /* ── FLOATING BALLOONS ───────────────────────────── */
+      #balloons {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .balloon {
+        position: absolute;
+        bottom: -120px;
+        width: 55px;
+        height: 70px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        animation: floatUp linear infinite;
+        opacity: 0.7;
+        filter: blur(0.3px);
+      }
+      .balloon::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 28px;
+        background: rgba(0, 0, 0, 0.12);
+        margin: 0 auto;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(-4deg);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translateY(-45vh) rotate(4deg);
+        }
+        100% {
+          transform: translateY(-105vh) rotate(-2deg);
+          opacity: 0;
+        }
+      }
+
+      /* ── HERO ────────────────────────────────────────── */
+      #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3.5rem 1.2rem 4rem;
+
+    background:
+        linear-gradient(rgba(7, 230, 130, 0.914),
+                        rgba(243, 242, 242, 0.75));
+       /* url("images/Deekshitha.jpeg"); */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+      #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.5;
+        pointer-events: none;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff6fb7' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 620px;
+      }
+
+      /* Framed circular baby photo */
+      .hero-photo-frame {
+         width: clamp(220px, 45vw, 300px);
+          height: clamp(220px, 45vw, 300px);
+    margin: 0 auto 1.6rem;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, var(--gold), #ffe680, var(--pink));
+    box-shadow: 0 12px 36px var(--shadow);
+      }
+      .hero-photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background: var(--pink-light);
+      }
+      .hero-photo-frame .ph-fallback {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.2rem;
+        background: linear-gradient(135deg, var(--pink-light), #ffe9b8);
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--gold), #ffe566);
+        color: var(--text);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.4rem 1.3rem;
+        border-radius: 50px;
+        margin-bottom: 1.1rem;
+        box-shadow: 0 4px 14px rgba(245, 200, 66, 0.45);
+        animation: fadeInDown 0.8s ease both;
+      }
+      .hero-invited {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(2rem, 7vw, 3.4rem);
+        color: var(--rose-deep);
+        line-height: 1.15;
+        animation: fadeInUp 0.9s ease 0.4s both;
+      }
+      .hero-name {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: clamp(2.4rem, 9vw, 4.6rem);
+        line-height: 1.05;
+        margin: 0.2rem 0 0.6rem;
+        background: linear-gradient(135deg, var(--pink-dark), var(--gold-deep));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeInUp 0.9s ease 0.5s both;
+      }
+      .hero-turns {
+        font-size: clamp(1rem, 3.4vw, 1.3rem);
+        color: var(--text-soft);
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        margin-bottom: 1.7rem;
+        animation: fadeInUp 0.9s ease 0.7s both;
+      }
+      .hero-date-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(255, 111, 183, 0.3);
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--pink-dark);
+        box-shadow: 0 4px 18px rgba(255, 111, 183, 0.15);
+        animation: fadeInUp 0.9s ease 0.9s both;
+      }
+      .scroll-cue {
+        position: absolute;
+        bottom: 1.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--text-soft);
+        z-index: 2;
+        animation: fadeInUp 1s ease 1.2s both;
+      }
+      .scroll-cue span {
+        display: block;
+        font-size: 1.3rem;
+        animation: nudge 1.6s ease-in-out infinite;
+      }
+      @keyframes nudge {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px);
+        }
+      }
+
+      /* ── SECTION BASE ────────────────────────────────── */
+      section {
+        padding: 4.5rem 1.2rem;
+        position: relative;
+        z-index: 1;
+      }
+      .section-title {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        font-size: clamp(1.6rem, 5vw, 2.3rem);
+        color: var(--text);
+        margin-bottom: 2.4rem;
+      }
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--pink), var(--gold));
+        margin: 0.65rem auto 0;
+      }
+
+      /* ── COUNTDOWN ───────────────────────────────────── */
+      #countdown {
+        background: linear-gradient(
+          135deg,
+          var(--rose-deep),
+          var(--pink-dark) 55%,
+          var(--gold-deep)
+        );
+        text-align: center;
+      }
+      #countdown .section-title {
+        color: #fff;
+      }
+      #countdown .section-title::after {
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .cd-wrap {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .cd-box {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 20px;
+        padding: 1.3rem 1.5rem;
+        min-width: 92px;
+      }
+      .cd-num {
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: clamp(2rem, 7vw, 3.2rem);
+        color: var(--gold);
+        line-height: 1;
+        text-shadow: 0 0 16px rgba(245, 200, 66, 0.45);
+      }
+      .cd-label {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.78);
+        margin-top: 0.45rem;
+      }
+      .cd-done {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
+        color: #fff;
+      }
+
+      /* ── EVENT DETAILS ───────────────────────────────── */
+      #details {
+        background: linear-gradient(135deg, #fff0f9, #fff9ed);
+      }
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.4rem;
+        max-width: var(--maxw);
+        margin: 0 auto 2rem;
+      }
+      .detail-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 1.9rem 1.4rem;
+        text-align: center;
+        box-shadow: 0 6px 24px rgba(255, 111, 183, 0.12);
+        border: 1.5px solid rgba(255, 111, 183, 0.15);
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .detail-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .detail-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 32px rgba(255, 111, 183, 0.2);
+      }
+      .detail-icon {
+        font-size: 2.1rem;
+        margin-bottom: 0.7rem;
+      }
+      .detail-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--pink);
+        margin-bottom: 0.35rem;
+      }
+      .detail-value {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .detail-sub {
+        font-size: 0.82rem;
+        color: var(--text-soft);
+        margin-top: 0.25rem;
+      }
+      .map-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        background: linear-gradient(135deg, #e8445a, #ff6b35);
+        color: #fff;
+        padding: 0.8rem 1.9rem;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 6px 20px rgba(232, 68, 90, 0.3);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .map-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(232, 68, 90, 0.4);
+      }
+
+      /* ── GALLERY ─────────────────────────────────────── */
+      #gallery {
+        background: #fff8fd;
+      }
+      .gallery-grid {
+         display: flex;
+         justify-content: center;
+         gap: 1rem;
+      }
+      .gallery-slot {
+        aspect-ratio: 1;
+        border-radius: 18px;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(135deg, var(--pink-light), #ffe9b8);
+        box-shadow: 0 6px 20px rgba(255, 111, 183, 0.12);
+        transition: transform 0.3s;
+      }
+      .gallery-slot:hover {
+        transform: scale(1.03);
+      }
+      .gallery-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        justify-content:baseline;
+      }
+      .gallery-slot .ph-fallback {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+
+      /* ── MESSAGE ─────────────────────────────────────── */
+      #message {
+        background: linear-gradient(160deg, #fff0f9, #fffbf0);
+        text-align: center;
+      }
+      .message-card {
+        max-width: 680px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 28px;
+        padding: 2.8rem 2.2rem;
+        box-shadow: 0 10px 40px rgba(255, 111, 183, 0.12);
+        border: 1.5px solid rgba(255, 111, 183, 0.15);
+        position: relative;
+      }
+      .message-card::before {
+        content: "\201C";
+        font-family: Georgia, serif;
+        font-size: 5rem;
+        color: rgba(255, 111, 183, 0.14);
+        position: absolute;
+        top: -0.2rem;
+        left: 1.3rem;
+        line-height: 1;
+      }
+      .message-text {
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        line-height: 1.9;
+        color: #6a3060;
+        font-style: italic;
+      }
+      .message-sig {
+        margin-top: 1.4rem;
+        font-family: "Great Vibes", cursive;
+        font-size: 1.7rem;
+        color: var(--pink-dark);
+      }
+
+      /* ── RSVP ────────────────────────────────────────── */
+      #rsvp {
+        background: linear-gradient(135deg, #fce4ec, #fff9c4);
+        text-align: center;
+      }
+      .rsvp-note {
+        color: var(--text-soft);
+        margin-bottom: 1.4rem;
+        font-size: 0.95rem;
+      }
+      .rsvp-btns {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .btn-rsvp {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.9rem 2.1rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-wa {
+        background: linear-gradient(135deg, #25d366, #128c5e);
+        color: #fff;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+      }
+      .btn-wa:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+      }
+      .btn-share {
+        background: linear-gradient(135deg, var(--pink), var(--pink-dark));
+        color: #fff;
+        box-shadow: 0 6px 20px var(--shadow);
+      }
+      .btn-share:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(224, 49, 122, 0.4);
+      }
+
+      /* ── FOOTER ──────────────────────────────────────── */
+      footer {
+        background: #2d0a25;
+        color: rgba(255, 255, 255, 0.65);
+        text-align: center;
+        padding: 1.7rem 1rem;
+        font-size: 0.8rem;
+      }
+      footer .gold {
+        color: var(--gold);
+      }
+
+      /* ── CONFETTI ────────────────────────────────────── */
+      #confetti-canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      /* ── ANIMATIONS / FADE-IN ────────────────────────── */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0) rotate(-10deg);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.15) rotate(5deg);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1) rotate(0);
+        }
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ── ACCESSIBILITY ───────────────────────────────── */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .fade-in,
+        .detail-card {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @media (max-width: 480px) {
+        section {
+          padding: 3.5rem 1rem;
+        }
+        .cd-box {
+          min-width: 72px;
+          padding: 1rem 0.9rem;
+        }
+        .message-card {
+          padding: 2rem 1.3rem;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="confetti-canvas"></canvas>
+    <div id="balloons"></div>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 1. HERO                                            -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-inner">
+        <!-- 👶 Baby photo. If missing, a cute emoji fallback shows automatically -->
+        <div class="hero-photo-frame">
+          <img
+            src="images/DEEKSHITHA1.jpeg"
+            alt="Princess A. Deekshitha"
+            onerror="
+              this.outerHTML =
+                '&lt;div class=&quot;ph-fallback&quot;&gt;👑&lt;/div&gt;'
+            "
+          />
+        </div>
+
+        <div class="hero-badge">🎀 Special Invitation</div>
+        <p class="hero-invited">You're invited to celebrate</p>
+        <h1 class="hero-name">Princess <br>A. Deekshitha</h1>
+        <!-- ✏️ Name -->
+        <p class="hero-turns">
+          is turning <span class="gold">1 Year Old</span> 🎂
+        </p>
+        <!-- ✏️ Age -->
+        <div class="hero-date-pill">
+          📅&nbsp; June 16, 2026 &nbsp;•&nbsp; Tuesday
+        </div>
+        <!-- ✏️ Date -->
+      </div>
+      <div class="scroll-cue">Scroll<span>⌄</span></div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 2. COUNTDOWN  (live timer)                          -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="countdown">
+      <h2 class="section-title fade-in">⏳ Counting Down to the Big Day</h2>
+      <div class="cd-wrap fade-in" id="cdWrap">
+        <div class="cd-box">
+          <span class="cd-num" id="cd-days">--</span
+          ><span class="cd-label">Days</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-hrs">--</span
+          ><span class="cd-label">Hours</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-min">--</span
+          ><span class="cd-label">Minutes</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-sec">--</span
+          ><span class="cd-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 3. EVENT DETAILS                                   -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="details">
+      <h2 class="section-title fade-in">🎉 Event Details</h2>
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">📅</div>
+          <div class="detail-label">Date</div>
+          <div class="detail-value">June 16, 2026</div>
+          <div class="detail-sub">Tuesday</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">⏰</div>
+          <div class="detail-label">Time</div>
+          <div class="detail-value">6:00 PM onwards</div>
+          <!-- ✏️ Time -->
+          <div class="detail-sub">Please be on time 🙏</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">📍</div>
+          <div class="detail-label">Venue</div>
+          <div class="detail-value">Grand Paradise Hall</div>
+          <!-- ✏️ Venue -->
+          <div class="detail-sub">Puducherry, Tamil Nadu</div>
+        </div>
+      </div>
+      <div style="text-align: center" class="fade-in">
+        <!-- ✏️ Replace with your real venue Maps link -->
+        <a
+          class="map-btn"
+          href="https://maps.app.goo.gl/2w8bBnKid3rP6xhj8?g_st=aw"
+          target="_blank"
+          rel="noopener"
+        >
+          📍 Open in Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 4. PHOTO GALLERY                                   -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="gallery">
+      <h2 class="section-title fade-in">📸 Our Little Princess</h2>
+      <div class="gallery-grid fade-in">
+        <!-- ✏️ Add more photos by copying a slot below -->
+        <div class="gallery-slot">
+          <img
+            src="images/DEEKSHITHA.jpeg"
+            alt="Deekshitha 1"
+            onerror="
+              this.outerHTML =
+                '&lt;div class=&quot;ph-fallback&quot;&gt;🌸&lt;/div&gt;'
+            "
+          />
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 5. FAMILY MESSAGE                                  -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="message">
+      <h2 class="section-title fade-in">💌 A Note from Us</h2>
+      <div class="message-card fade-in">
+        <p class="message-text">
+          With hearts full of joy and gratitude, we invite you to share in a
+          <span class="gold">magical milestone</span> — the very first birthday
+          of our little <span class="gold">Princess A. Deekshitha</span>. 🌸<br /><br />
+          Your presence is our greatest gift. Come, let's celebrate love,
+          laughter, and the beautiful journey that lies ahead for our little
+          one.
+          <!-- ✏️ Edit this message freely -->
+        </p>
+        <div class="message-sig">— With love, our family 🎀</div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 6. RSVP & SHARE                                    -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="rsvp">
+      <h2 class="section-title fade-in">🎊 RSVP &amp; Share</h2>
+      <p class="rsvp-note fade-in">
+        Kindly confirm your attendance by <span class="gold">June 16</span> 🙏
+      </p>
+      <div class="rsvp-btns fade-in">
+        <!-- ✏️ Replace the number after wa.me/ with your WhatsApp number (with country code) -->
+        <a
+          class="btn-rsvp btn-wa"
+          href="https://wa.me/918428992028?text=Hi!%20We%20will%20attend%20Princess%20A.%20Deekshitha's%20birthday%20party%20on%20June%2016!%20🎉"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            />
+          </svg>
+          RSVP on WhatsApp
+        </a>
+        <button class="btn-rsvp btn-share" id="shareBtn">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2.5"
+          >
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+          Share Invite
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      Made with <span class="gold">💛</span> for
+      <span class="gold">Princess A. Deekshitha</span>'s special day
+      &nbsp;|&nbsp; June 16, 2026
+    </footer>
+
+    <!-- ════════════════════════════════════════════════ -->
+    <!--   JAVASCRIPT                                        -->
+    <!-- ════════════════════════════════════════════════ -->
+    <script>
+      /* ── ⚙️ EVENT CONFIG (edit these two lines) ───────── */
+      const EVENT_DATE = "2026-06-16T18:00:00"; // birthday date + time
+      const SHARE_TEXT =
+        "You're invited to celebrate Princess A. Deekshitha's 1st birthday on June 16! 🎂🎉";
+
+      /* ── LIVE COUNTDOWN ───────────────────────────────── */
+      (function () {
+        const target = new Date(EVENT_DATE).getTime();
+        const $ = (id) => document.getElementById(id);
+        const pad = (n) => String(n).padStart(2, "0");
+        function tick() {
+          const diff = target - Date.now();
+          if (diff <= 0) {
+            $("cdWrap").innerHTML =
+              '<div class="cd-done">🎉 The big day is here! 🎉</div>';
+            return clearInterval(timer);
+          }
+          const d = Math.floor(diff / 86400000);
+          const h = Math.floor((diff % 86400000) / 3600000);
+          const m = Math.floor((diff % 3600000) / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          $("cd-days").textContent = d;
+          $("cd-hrs").textContent = pad(h);
+          $("cd-min").textContent = pad(m);
+          $("cd-sec").textContent = pad(s);
+        }
+        tick();
+        const timer = setInterval(tick, 1000);
+      })();
+
+      /* ── BALLOON FACTORY ──────────────────────────────── */
+      (function () {
+        const colors = [
+          "#ff6fb7",
+          "#ff94cc",
+          "#ffb3de",
+          "#f5c842",
+          "#ffdd80",
+          "#ff8fab",
+          "#a0d9ff",
+          "#ffb347",
+        ];
+        const c = document.getElementById("balloons");
+        for (let i = 0; i < 16; i++) {
+          const b = document.createElement("div");
+          b.className = "balloon";
+          const col = colors[Math.floor(Math.random() * colors.length)];
+          b.style.cssText = `background:radial-gradient(circle at 35% 30%,${col}dd,${col}88);
+      left:${Math.random() * 100}%;width:${42 + Math.random() * 26}px;height:${52 + Math.random() * 32}px;
+      animation-duration:${7 + Math.random() * 9}s;animation-delay:${Math.random() * 8}s;`;
+          c.appendChild(b);
+        }
+      })();
+
+      /* ── CONFETTI ENGINE ──────────────────────────────── */
+      const canvas = document.getElementById("confetti-canvas"),
+        ctx = canvas.getContext("2d");
+      let confetti = [];
+      function resize() {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+      }
+      resize();
+      addEventListener("resize", resize);
+      function burst(x, y, count = 80) {
+        const cols = [
+          "#ff6fb7",
+          "#f5c842",
+          "#ff4b8b",
+          "#ffe066",
+          "#a0d9ff",
+          "#ffb347",
+          "#fff",
+        ];
+        for (let i = 0; i < count; i++) {
+          const a = Math.random() * Math.PI * 2,
+            sp = 3 + Math.random() * 6;
+          confetti.push({
+            x,
+            y,
+            vx: Math.cos(a) * sp,
+            vy: Math.sin(a) * sp - 3,
+            color: cols[Math.floor(Math.random() * cols.length)],
+            size: 5 + Math.random() * 5,
+            rot: Math.random() * 360,
+            rs: (Math.random() - 0.5) * 10,
+            alpha: 1,
+            shape: Math.random() > 0.5 ? "rect" : "circle",
+          });
+        }
+      }
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confetti = confetti.filter((p) => p.alpha > 0.01);
+        confetti.forEach((p) => {
+          ctx.save();
+          ctx.globalAlpha = p.alpha;
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rot * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          if (p.shape === "rect")
+            ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+          else {
+            ctx.beginPath();
+            ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.08;
+          p.rot += p.rs;
+          p.alpha -= 0.012;
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+      setTimeout(() => {
+        burst(innerWidth * 0.25, innerHeight * 0.4, 100);
+        burst(innerWidth * 0.75, innerHeight * 0.4, 100);
+      }, 800);
+      addEventListener("click", (e) => burst(e.clientX, e.clientY, 45));
+
+      /* ── SCROLL FADE-IN ───────────────────────────────── */
+      const io = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".fade-in,.detail-card")
+        .forEach((el) => io.observe(el));
+
+      /* ── SHARE BUTTON ─────────────────────────────────── */
+      document
+        .getElementById("shareBtn")
+        .addEventListener("click", async () => {
+          const data = {
+            title: "🎀 Princess A. Deekshitha — 1st Birthday",
+            text: SHARE_TEXT,
+            url: location.href,
+          };
+          if (navigator.share) {
+            try {
+              await navigator.share(data);
+            } catch (e) {}
+          } else
+            window.open(
+              `https://wa.me/?text=${encodeURIComponent(data.text + " " + data.url)}`,
+              "_blank",
+            );
+        });
+    </script>
+  </body>
+</html>
